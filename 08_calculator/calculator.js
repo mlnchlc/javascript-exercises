@@ -8,16 +8,18 @@ const subtract = function (a, b) {
 
 const sum = function (arr) {
   return arr.reduce((total, curr) => {
-    total += curr;
-  });
+    return total + curr;
+  }, 0);
 };
 
-const multiply = function (a, b) {
-  return a * b;
+const multiply = function (arr) {
+  return arr.reduce((product, curr) => {
+    return product * curr;
+  }, 1);
 };
 
 const power = function (a, b) {
-  return a ^ b;
+  return a ** b;
 };
 
 const factorial = function (a) {
