@@ -1,14 +1,7 @@
-const removeFromArray = function(arr, ...rElements) {
-
-  let res = [];
-  let rSet = new Set();
-  for (const ele of rElements) {
-    rSet.add(ele);
-  }
-  for (const ele of arr) {
-    if (!rSet.has(ele))
-      res.push(ele);
-  }
+const removeFromArray = function (arr, ...rElements) {
+  let rSet = new Set(rElements);
+  console.log(rSet)
+   let res = arr.filter(ele => !rSet.has(ele));
   return res;
 };
 
